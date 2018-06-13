@@ -29,6 +29,6 @@ class CreateWolvesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('wolfs');
+        Schema::dropIfExists('wolves');
     }
 }
