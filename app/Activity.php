@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Wolf extends Model
+class Activity extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,7 +12,7 @@ class Wolf extends Model
      * @var array
      */
     protected $fillable = [
-        'name', 'gender', 'birthday',
+        'wolf_id', 'start_time', 'end_time',
     ];
 
     /**
@@ -22,9 +22,9 @@ class Wolf extends Model
      */
     public $timestamps = true;
 
-    public function activites()
+    public function wolf()
     {
-        return $this->hasMany('App\Activity');
+        return $this->belongsTo('App\Wolf');
     }
 
 }
